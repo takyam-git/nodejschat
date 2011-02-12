@@ -1,0 +1,202 @@
+@charset "utf-8";
+/*
+ * KUZIRA CSS Framework
+ * platform.css
+ * version: 1.1.1
+ *
+ * Copyright (c) 2010 Yutaka Sumi (http://www.kuzira.org/)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Date: 2010-10-26
+ */
+
+/* ------------------------------------------------------------ プラットフォーム */
+body { text-align: center; }
+div#platform { margin: 0 auto; height: auto; text-align: left; }
+div#platform { width: 960px; }
+div#platform.typeNarrow { width: 720px; }
+div#headerOuter,
+div#contentsOuter,
+div#footerOuter { clear: both; }
+/* スプレッド版 */
+body.spread div#platform { width: 100%; }
+body.spread div#header,
+body.spread div#globalNav,
+body.spread div#topicPath,
+body.spread div#contents,
+body.spread div#utilities,
+body.spread div#footer { width: 960px; margin-right: auto; margin-left: auto; }
+/* その他 */
+ul#skipNav,
+div#analyzer { display: none; }
+/* ------------------------------------------------------------ コンテナ */
+/* 囲みあり */
+body.grid16 div.boxedItem,
+body.grid24 div.boxedItem { margin: 0 10px 10px 10px; padding-top: 10px; }
+body.grid20 div.boxedItem { margin: 0 8px 8px; padding-top: 8px; }
+div.boxedItem { clear: both; border: 1px dashed #000; }
+/* ------------------------------------------------------------ カラムセット */
+div.locator { clear: both; }
+div.col01,
+div.col02,
+div.col03,
+div.col04,
+div.col05,
+div.col06,
+div.col07,
+div.col08,
+div.col09,
+div.col10,
+div.col11,
+div.col12,
+div.col13,
+div.col14,
+div.col15,
+div.col16,
+div.col17,
+div.col18,
+div.col19,
+div.col20,
+div.col21,
+div.col22,
+div.col23,
+div.col24,
+div.col3A,
+div.col3B,
+div.col4A,
+div.col4B,
+div.col4C,
+div.col5A,
+div.col5B,
+div.col5C,
+div.col5D { float: left; }
+/* 16grid用カラム */
+body.grid16 div.col01 { width: 60px; }
+body.grid16 div.col02 { width: 120px; }
+body.grid16 div.col03 { width: 180px; }
+body.grid16 div.col04 { width: 240px; }
+body.grid16 div.col05 { width: 300px; }
+body.grid16 div.col06 { width: 360px; }
+body.grid16 div.col07 { width: 420px; }
+body.grid16 div.col08 { width: 480px; }
+body.grid16 div.col09 { width: 540px; }
+body.grid16 div.col10 { width: 600px; }
+body.grid16 div.col11 { width: 660px; }
+body.grid16 div.col12 { width: 720px; }
+body.grid16 div.col13 { width: 780px; }
+body.grid16 div.col14 { width: 840px; }
+body.grid16 div.col15 { width: 900px; }
+body.grid16 div.col16 { width: 940px; }
+/* 20grid用カラム */
+body.grid20 div.col01 { width: 48px; }
+body.grid20 div.col02 { width: 96px; }
+body.grid20 div.col03 { width: 144px; }
+body.grid20 div.col04 { width: 192px; }
+body.grid20 div.col05 { width: 240px; }
+body.grid20 div.col06 { width: 288px; }
+body.grid20 div.col07 { width: 336px; }
+body.grid20 div.col08 { width: 384px; }
+body.grid20 div.col09 { width: 432px; }
+body.grid20 div.col10 { width: 480px; }
+body.grid20 div.col11 { width: 528px; }
+body.grid20 div.col12 { width: 576px; }
+body.grid20 div.col13 { width: 624px; }
+body.grid20 div.col14 { width: 672px; }
+body.grid20 div.col15 { width: 720px; }
+body.grid20 div.col16 { width: 768px; }
+body.grid20 div.col17 { width: 816px; }
+body.grid20 div.col18 { width: 864px; }
+body.grid20 div.col19 { width: 912px; }
+body.grid20 div.col20 { width: 960px; }
+/* 24grid用カラム */
+body.grid24 div.col01 { width: 40px; }
+body.grid24 div.col02 { width: 80px; }
+body.grid24 div.col03 { width: 120px; }
+body.grid24 div.col04 { width: 160px; }
+body.grid24 div.col05 { width: 200px; }
+body.grid24 div.col06 { width: 240px; }
+body.grid24 div.col07 { width: 280px; }
+body.grid24 div.col08 { width: 320px; }
+body.grid24 div.col09 { width: 360px; }
+body.grid24 div.col10 { width: 400px; }
+body.grid24 div.col11 { width: 440px; }
+body.grid24 div.col12 { width: 480px; }
+body.grid24 div.col13 { width: 520px; }
+body.grid24 div.col14 { width: 560px; }
+body.grid24 div.col15 { width: 600px; }
+body.grid24 div.col16 { width: 640px; }
+body.grid24 div.col17 { width: 680px; }
+body.grid24 div.col18 { width: 720px; }
+body.grid24 div.col19 { width: 760px; }
+body.grid24 div.col20 { width: 800px; }
+body.grid24 div.col21 { width: 840px; }
+body.grid24 div.col22 { width: 880px; }
+body.grid24 div.col23 { width: 920px; }
+body.grid24 div.col24 { width: 960px; }
+/* 分割カラム */
+div.col3-1 { width: 33.33%; }
+div.col3-2 { width: 66.66%; }
+div.col4-1 { width: 25%; }
+div.col4-2 { width: 50%; }
+div.col4-3 { width: 75%; }
+div.col5-1 { width: 20%; }
+div.col5-2 { width: 40%; }
+div.col5-3 { width: 60%; }
+div.col5-4 { width: 80%; }
+* html div.col3-1 { width: 33.23%; }
+* html div.col3-2 { width: 66.56%; }
+* html div.col4-1 { width: 24.9%; }
+* html div.col4-2 { width: 49.9%; }
+* html div.col4-3 { width: 74.9%; }
+* html div.col5-1 { width: 19.9%; }
+* html div.col5-2 { width: 39.9%; }
+* html div.col5-3 { width: 59.9%; }
+* html div.col5-4 { width: 79.9%; }
+/* ------------------------------------------------------------ プリセット */
+/* ダブルカラム */
+div#platform.typeDa div#mainContents,
+div#platform.typeDb div#mainContents { width: 75%; }
+div#platform.typeDa div#subContents,
+div#platform.typeDb div#subContents { width: 25%; }
+div#platform.typeDa div#mainContents,
+div#platform.typeDb div#subContents { float: right; }
+div#platform.typeDb div#mainContents,
+div#platform.typeDa div#subContents { float: left; }
+/* トリプルカラム */
+div#platform.typeTa div#mainContents,
+div#platform.typeTb div#mainContents,
+div#platform.typeTc div#mainContents { width: 50%; }
+div#platform.typeTa div#subContents,
+div#platform.typeTb div#subContents,
+div#platform.typeTc div#subContents,
+div#platform.typeTa div#extraContents,
+div#platform.typeTb div#extraContents,
+div#platform.typeTc div#extraContents { width: 25%; }
+div#platform.typeTa div#mainContents,
+div#platform.typeTa div#subContents,
+div#platform.typeTa div#extraContents { float: left; }
+div#platform.typeTb div#mainContents { float: left; margin-left: 25%; display: inline; }
+div#platform.typeTb div#subContents { float: left; margin-left: -75%; }
+div#platform.typeTb div#extraContents { float: right; }
+div#platform.typeTc div#mainContents { float: right; }
+div#platform.typeTc div#subContents,
+div#platform.typeTc div#extraContents { float: left; }
+/* ------------------------------------------------------------ クリアフィックス */
+div.locator:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+div.locator { display: inline-table; }
+* html div.locator { height: 1%; }
+div.locator { display: block; zoom: 1; }
+/* ------------------------------------------------------------ 印刷対応 */
+@media print {
+* html body { zoom: 67%; }
+* { page-break-before: avoid; }
+/* Links */
+a:link,
+a:visited { background: transparent; font-weight: 700; text-decoration: underline; color: #333; }
+ a:link[href^="http://"]:after, a[href^="http://"]:visited:after {
+ content: " (" attr(href) ") ";
+ font-size: 90%;
+}
+}
+
+/* EOF */

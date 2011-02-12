@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+ * KUZIRA CSS Framework
+ * import.css
+ * version: 1.0.1
+ *
+ * Copyright (c) 2010 Yutaka Sumi (http://www.kuzira.org/)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Date: 2010-10-24
+ */
+
+/* ------------------------------------------------------------ インポート */
+/* 初期設定 */
+@import "/common/css/default.css";
+@import "/common/css/typography.css";
+
+/* レイアウト */
+@import "/common/css/platform.css";
+@import "/common/css/layout.css";
+
+/* エレメント */
+@import "/common/css/element.css";
+/* ------------------------------------------------------------ 開発用スタイル */
+div#mainContents p.dev { clear: both; background-color: #000; color: #FFF; padding: 2px 5px; margin-top: 30px; width: 50%; }
+
+/* EOF */

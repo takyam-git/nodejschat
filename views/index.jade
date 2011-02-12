@@ -1,0 +1,24 @@
+div#header
+	ul#submenu
+		li
+			a(href='/register/') 新規登録
+		li
+			- if(session.user && session.user != '')
+				a(href='/logout') ログアウト@logined !{session.user}
+			- else
+				a(href='/login') ログイン
+div#main
+	div#chatcontainer
+		div#inputbox
+			textarea
+			p#send 送信( Ctrl + Enterでも送信できます ）
+		div#chatarea
+	div#chatterlist
+		- for( var i = 0; i < 10; i++)
+			div.userbox
+				div.userimg
+					img(src='/images/itsme.png', width='30', height='30')
+				div.userstatus
+					div.username なまえ
+					div.userdate 2011/02/02 15:05:55
+div#footer

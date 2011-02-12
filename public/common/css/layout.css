@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*
+ * KUZIRA CSS Framework
+ * layout.css
+ * version: 1.0.1
+ *
+ * Copyright (c) 2010 Yutaka Sumi (http://www.kuzira.org/)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Date: 2010-10-24
+ */
+
+/* ------------------------------------------------------------ グリッド */
+body.grid16 div#platform { background-image: url(/common/images/bg-60px.png); }
+body.grid20 div#platform { background-image: url(/common/images/bg-48px.png); }
+body.grid24 div#platform { background-image: url(/common/images/bg-40px.png); }
+/* ------------------------------------------------------------ ヘッダ */
+div#header h1 { font-weight: bold; font-size: 240%; padding: 10px 10px 10px 0; }
+/* ------------------------------------------------------------ ヘッダ */
+div#footer address { margin: 0 10px 10px; text-align: right; }
+
+/* EOF */

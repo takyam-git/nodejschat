@@ -1,0 +1,88 @@
+@charset "utf-8";
+/*
+ * KUZIRA CSS Framework
+ * typography.css
+ * version: 1.0
+ * 
+ * Copyright (c) 2010 Yutaka Sumi (http://www.kuzira.org/)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Date: 2010-01-24
+ */
+
+/* ------------------------------------------------------------ 初期設定 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+dt,
+dd,
+th,
+td,
+pre,
+caption,
+address { line-height: 1.5; color: #333; font-size: 120%; }
+/* 入れ子対応 */
+p input,
+p select,
+p textarea,
+li p,
+li li,
+li dt,
+li dd,
+li input,
+li select,
+li textarea,
+dd p,
+dd li,
+dd dt,
+dd dd,
+dd input,
+dd select,
+dd textarea,
+th p,
+th li,
+th dt,
+th dd,
+th input,
+th select,
+th textarea,
+td p,
+td li,
+td dt,
+td dd,
+td input,
+td select,
+td textarea { font-size: 100%; }
+/* ------------------------------------------------------------ 強調スタイル */
+strong,
+th,
+thead td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a { font-weight: bold; }
+em { background-color: #FCF; }
+strong { color: #C00; }
+/* ------------------------------------------------------------ 引用 */
+blockquote *:first-child:before { content: "\201C"; }
+blockquote *:first-child:after { content: "\201D"; }
+/* ------------------------------------------------------------ リンクスタイル */
+a:link,
+a:visited { color: #3B5BA4; text-decoration: underline; }
+a:hover,
+a:active { color: #F60; text-decoration: underline; }
+
+/* EOF */

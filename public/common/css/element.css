@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*
+ * KUZIRA CSS Framework
+ * element.css
+ * version: 1.0.1
+ *
+ * Copyright (c) 2010 Yutaka Sumi (http://www.kuzira.org/)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Date: 2010-10-24
+ *
+ * index:
+ * 00.Layout
+ * 01.Heading Elements
+ * 02.Paragraph Elements
+ * 03.List Elements
+ * 04.Table Elements
+ * 05.Etc Elements
+ * 06.Links Elements
+ * 07.Navigation
+ * 99.Clearfixes
+ */
+
+/* ------------------------------------------------------------ 00.Layout */
+/* 本文 */
+div#mainContents p { margin: 0 10px 10px; }
+div#mainContents hr { margin: 30px 10px; }
+* html div#mainContents hr { margin: 23px 10px; }
+body.grid20 div#mainContents p { margin: 0 8px 8px; }
+body.grid20 div#mainContents hr { margin: 30px 8px; }
+* html body.grid20 div#mainContents hr { margin: 23px 8px; }
+/* ------------------------------------------------------------ 01.Heading Elements */
+/* ------------------------------------------------------------ 02.Paragraph Elements */
+/* ------------------------------------------------------------ 03.List Elements */
+/* ------------------------------------------------------------ 04.Table Elements */
+/* ------------------------------------------------------------ 05.Etc Elements */
+hr { border-top: 1px dashed #000; border-bottom: none; border-right: none; border-left: none; display: block; height: 1px; }
+/* ------------------------------------------------------------ 06.Link Element */
+/* ------------------------------------------------------------ 07.Navigation */
+/* ------------------------------------------------------------ 99.Clearfixes */
+
+/* EOF */

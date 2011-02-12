@@ -1,0 +1,20 @@
+!!!
+html
+	head
+		- if(title)
+			title!=title
+		- else
+			title NODE CHAT
+		link(rel='stylesheet', href='/stylesheets/reset-min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/javascripts/cleditor/jquery.cleditor.css')
+		link(rel='stylesheet', href='/javascripts/superbox/jquery.superbox.css')
+		script(type='text/javascript', src='/javascripts/jquery-1.5.min.js')
+		script(type='text/javascript', src='/javascripts/cleditor/jquery.cleditor.min.js')
+		script(type='text/javascript', src='/javascripts/superbox/jquery.superbox-min.js')
+		script(type='text/javascript', src='/socket.io/socket.io.js')
+		script(type='text/javascript', src='/javascripts/SessionWebSocket/sws.js')
+		script(type='text/javascript', src='/javascripts/nodechat.js')
+	body
+		div#container
+			div#body!=body

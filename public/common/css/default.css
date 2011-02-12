@@ -1,0 +1,100 @@
+@charset "utf-8";
+/*
+ * KUZIRA CSS Framework
+ * default.css
+ * version: 1.8
+ *
+ * Copyright (c) 2010 Yutaka Sumi (http://www.kuzira.org/)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * 
+ * Date: 2010-10-24
+ */
+
+/* ------------------------------------------------------------ ブラウザスタイルリセット */
+html { overflow-y: scroll; }
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+address,
+code,
+em,
+img,
+q,
+strong,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video { margin: 0; padding: 0; outline: 0; font-style: normal; font-weight: normal; }
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section { display:block; }
+/* ------------------------------------------------------------ フォント初期設定 */
+body { font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; font-size: 10px; }
+*:first-child+html body { font-size: x-small; }
+* html body { font-size: xx-small; }
+table { font-size: 100%; }
+ol li,
+ul li { list-style: none; }
+blockquote,
+q { quotes: none; }
+/* ------------------------------------------------------------ テーブル初期設定 */
+table { border-collapse: collapse; border-spacing: 0; }
+/* ------------------------------------------------------------ その他 */
+a,
+img,
+fieldset { border: 0; }
+img,
+input { vertical-align: middle; }
+* html img,
+* html input { vertical-align: bottom; }
+*:first-child+html img,
+*:first-child+html input { vertical-align: bottom; }
+
+/* EOF */
