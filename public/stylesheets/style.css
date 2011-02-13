@@ -139,6 +139,7 @@ div.userbox:last-child {
 div#chatterlist div.userimg {
 	float: left;
 	margin: 0 10px 10px 0;
+	border: 1px solid #ffffff;
 }
 
 div#chatterlist div.userstatus {

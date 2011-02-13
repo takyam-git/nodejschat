@@ -54,6 +54,7 @@ $(document).ready(function(){
 			sendMessage();
 		});
 
+		var isCtrl;
 		editdoc.keyup(function(e){
 			if(e.which == 17){
 				isCtrl=false;
@@ -79,8 +80,20 @@ $(document).ready(function(){
 });
 
 function messageGetted(msg){
-	var add = $('<div class="chatbox"><div class="chattop"><div class="chatimg"><img height="25" width="25" src="/images/itsme.png"></div><div class="chatbody"></div></div><div class="chatbottom"><div class="chatname"></div><div class="chatdate"></div></div></div>');
+	if(msg.users != null){
+		var usersbox = $('div#chatterlist');
+		usersbox.html('');
+		for(var u in msg.users){
+			var adduser = $('<div class="userbox"><div class="userimg"><img height="24" width="24" src="/images/bakeneko.png"></div><div class="userstatus"><div class="username"></div><div class="userdate"></div></div></div>');
+			adduser.find('div.userimg img').attr('src', msg.users[u].image);
+			adduser.find('div.username').append(msg.users[u].name);
+			adduser.find('div.userdate').append(msg.users[u].date);
+			usersbox.append(adduser);
+		}
+	}
+	var add = $('<div class="chatbox"><div class="chattop"><div class="chatimg"><img height="24" width="24" src="/images/bakeneko.png"></div><div class="chatbody"></div></div><div class="chatbottom"><div class="chatname"></div><div class="chatdate"></div></div></div>');
 	add.find('div.chatbody').append(msg.message);
+	add.find('div.chatimg img').attr('src', msg.image);
 	add.find('div.chatname').append(msg.user);
 	add.find('div.chatdate').append(msg.date);
 	chatarea.prepend(add);

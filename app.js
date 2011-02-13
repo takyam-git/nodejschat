@@ -10,6 +10,11 @@ var express          = require('express'),
 
 var app = module.exports = express.createServer();
 
+//MAIN CONFIG
+var oauth_consumer_key = 'your key';
+var oauth_consumer_key_secret = 'your secret key';
+var $PORT = 3000;
+
 // Configuration
 app.configure(function(){
 	app.set('views', __dirname + '/views');
@@ -31,15 +36,13 @@ app.configure(function(){
 	}
 });*/
 
-var oauth_consumer_key = 'your key';
-var oauth_consumer_key_secret = 'your secret key';
 var oauth = new OAuth(
 	'http://twitter.com/oauth/request_token',
 	'http://twitter.com/oauth/access_token',
 	oauth_consumer_key,
 	oauth_consumer_key_secret,
 	'1.0A',
-	'http://www2133u.sakura.ne.jp:3000/login',
+	'http://www2133u.sakura.ne.jp:' + $PORT.toString() + '/login',
 	'HMAC-SHA1'
 );
 app.configure('development', function(){
@@ -101,19 +104,26 @@ app.get('/logout', function(req, res) {
 });
 
 var messages = [];
+var users    = []
 var socket = io.listen(app);
 socket.on('connection', sws.ws(function(client){
 		var user = client.sessionId;
-		function create_message(msg){
+		var userdata = {
+			name : user,
+			date : (new Date()).toLocaleString(),
+			image: '/images/bakeneko.png'
+		}
+
+		function create_message(msg, userflag){
 			var ret = {
 				user    : user,
 				type    : 'announce',
 				message : msg,
-				date    : (new Date()).toLocaleString()
+				date    : (new Date()).toLocaleString(),
+				image   : userdata.image,
+				users   : (userflag) ? users : null,
 			}
-
 			messages.push(ret);
-
 			if(messages.length > 100){
 				messages.shift();
 			}
@@ -123,12 +133,16 @@ socket.on('connection', sws.ws(function(client){
 		client.on('secure', function(){
 			if(client.session.user){
 				user = client.session.user;
+				userdata.name = user;
+				userdata.image = 'http://img.tweetimag.es/i/' + user + '_m';
 			}
 
+			users.push(userdata);
+
 			if(client.session.connected){
-				var message = create_message(client.sessionId + 'さんが、' + user + 'さんとしてログインしました');
+				var message = create_message(client.sessionId + 'さんが、' + user + 'さんとしてログインしました', true);
 			}else{
-				var message = create_message(user + 'さんが接続されました');
+				var message = create_message(user + 'さんが接続されました', true);
 			}
 			for(var i = 0; i < messages.length; i++){
 				client.send(messages[i]);
@@ -145,9 +159,12 @@ socket.on('connection', sws.ws(function(client){
 		});
 
 		client.on('disconnect', function(){
-			if(!client.session){
-				client.broadcast(create_message(user + 'さんが切断されました'));
+			for(var i=0; i < users.length; i++){
+				if(users[i]==userdata){
+					users.splice(i,1);
+				}
 			}
+			client.broadcast(create_message(user + 'さんが切断されました', true));
 		});
 
 	}
@@ -156,6 +173,6 @@ socket.on('connection', sws.ws(function(client){
 // Only listen on $ node app.js
 
 if (!module.parent) {
-  app.listen(3000);
+  app.listen($PORT);
   console.log("Express server listening on port %d", app.address().port)
 }
